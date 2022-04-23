@@ -1,6 +1,6 @@
 let sortear = document.getElementById("sortear")    
-let sorteadosida = document.getElementById("turnodeida1")
-let sorteadosvolta = document.getElementById("turnodeida2")
+let sorteadosida = document.getElementById("sorteadosida")
+let sorteadosvolta = document.getElementById("sorteadosvolta")
 let turnodevolta = document.getElementById("turnodevolta")
 let turnodevolta2 = document.getElementById("turnodevolta2")
 let tabela = document.getElementById("tabela")
@@ -16,7 +16,7 @@ timescerto.pop()
 timescerto.shift()
 
 
-let todosostimes = timescerto.map( (timess) =>{
+let testando = timescerto.map( (timess) =>{
 
 
 return timess.split(";")[0];
@@ -66,7 +66,7 @@ let santospts = 0
 sortear.addEventListener("click", () =>{
     
   
-    misturando(todosostimes)
+    misturando(testando)
     misturando(cidades)
 
  // TURNO IDA RODADA 1
@@ -77,27 +77,27 @@ sortear.addEventListener("click", () =>{
     
     misturando(timesgols)
     misturando(cidades)
-var jogo1Rodada1 = `${todosostimes[i]} vs${todosostimes[i+3]} - ${cidades[i]} - rodada 1 ${timesgols[0]}x${timesgols[1]}`
+var jogo1Rodada1 = `${testando[i]} vs${testando[i+3]} - ${cidades[i]} - rodada 1 ${timesgols[0]}x${timesgols[1]}`
 
 cidadesduplicadas.push(cidades[i])
 
 if(timesgols[0] > timesgols[1]){
- todosostimes[i].includes("Vasco") ? vascopts += 3 : ""
- todosostimes[i].includes("Flamengo") ? flapts += 3 : ""
- todosostimes[i].includes("Palmeiras") ? palpts += 3 : ""
- todosostimes[i].includes("Internacional") ? interpts += 3 : ""
- todosostimes[i].includes("Cruzeiro") ? cruzeiropts += 3 : ""
- todosostimes[i].includes("Santos") ? santospts += 3 : ""
+ testando[i].includes("Vasco") ? vascopts += 3 : ""
+ testando[i].includes("Flamengo") ? flapts += 3 : ""
+ testando[i].includes("Palmeiras") ? palpts += 3 : ""
+ testando[i].includes("Internacional") ? interpts += 3 : ""
+ testando[i].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+ testando[i].includes("Santos") ? santospts += 3 : ""
 
 
 
 }if(timesgols[1] > timesgols[0]){
-    todosostimes[i+3].includes("Vasco") ? vascopts += 3 : ""
-    todosostimes[i+3].includes("Flamengo") ? flapts += 3 : ""
-    todosostimes[i+3].includes("Palmeiras") ? palpts += 3 : ""
-    todosostimes[i+3].includes("Internacional") ? interpts += 3 : ""
-    todosostimes[i+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    todosostimes[i+3].includes("Santos") ? santospts += 3 : ""
+    testando[i+3].includes("Vasco") ? vascopts += 3 : ""
+    testando[i+3].includes("Flamengo") ? flapts += 3 : ""
+    testando[i+3].includes("Palmeiras") ? palpts += 3 : ""
+    testando[i+3].includes("Internacional") ? interpts += 3 : ""
+    testando[i+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    testando[i+3].includes("Santos") ? santospts += 3 : ""
  
 
 }
@@ -105,7 +105,7 @@ if(timesgols[0] > timesgols[1]){
 
 if(cidadesduplicadas[0] == cidadesduplicadas[1]){
     
-    let primeiroelemento = document.getElementById("turnodeida1").firstElementChild.textContent += "(RODADA DUPLA)"
+    let primeiroelemento = document.getElementById("sorteadosida").firstElementChild.textContent += "(RODADA DUPLA)"
     sorteadosida.innerHTML += `<p>${jogo1Rodada1}(RODADA DUPLA)<p>`
         cidadesduplicadas[0] = ""
 
@@ -117,15 +117,15 @@ else
     
  }if(cidadesduplicadas[2] == cidadesduplicadas[1] & cidadesduplicadas[2] != cidadesduplicadas[0]){
 
- ultimoelemento = document.getElementById("turnodeida1").lastElementChild.textContent += "(RODADA DUPLA)"
- let primeiroelemento = document.getElementById("turnodeida1").children[1].textContent += "(RODADA DUPLA)"
+ ultimoelemento = document.getElementById("sorteadosida").lastElementChild.textContent += "(RODADA DUPLA)"
+ let primeiroelemento = document.getElementById("sorteadosida").children[1].textContent += "(RODADA DUPLA)"
 
 
 
 }if(cidadesduplicadas[0] == cidadesduplicadas[2]){
 
-ultimoelemento = document.getElementById("turnodeida1").lastElementChild.textContent += "(RODADA DUPLA)"
- primeiroelemento = document.getElementById("turnodeida1").firstElementChild.textContent += "(RODADA DUPLA)"
+ultimoelemento = document.getElementById("sorteadosida").lastElementChild.textContent += "(RODADA DUPLA)"
+ p = document.getElementById("sorteadosida").firstElementChild.textContent += "(RODADA DUPLA)"
 }
 
    
@@ -145,28 +145,28 @@ ultimoelemento = document.getElementById("turnodeida1").lastElementChild.textCon
         misturando(timesgols)
     misturando(cidades)
 
-    var jogo2rodada1volta = `${todosostimes[i+3]} vs${todosostimes[i]} - ${cidades[i]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
+    var jogo1Rodada2v = `${testando[i+3]} vs${testando[i]} - ${cidades[i]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
 cidadesduplicadas.push(cidades[i])
 
 if(timesgols[0] > timesgols[1]){
 
 
-    todosostimes[i+3].includes("Vasco") ? vascopts += 3 : ""
- todosostimes[i+3].includes("Flamengo") ? flapts += 3 : ""
- todosostimes[i+3].includes("Palmeiras") ? palpts += 3 : ""
- todosostimes[i+3].includes("Internacional") ? interpts += 3 : ""
- todosostimes[i+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
- todosostimes[i+3].includes("Santos") ? santospts += 3 : ""
+ testando[i+3].includes("Vasco") ? vascopts += 3 : ""
+    testando[i+3].includes("Flamengo") ? flapts += 3 : ""
+    testando[i+3].includes("Palmeiras") ? palpts += 3 : ""
+    testando[i+3].includes("Internacional") ? interpts += 3 : ""
+    testando[i+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    testando[i+3].includes("Santos") ? santospts += 3 : ""
 
 
 
 }if(timesgols[1] > timesgols[0]){
-    todosostimes[i].includes("Vasco") ? vascopts += 3 : ""
-    todosostimes[i].includes("Flamengo") ? flapts += 3 : ""
-    todosostimes[i].includes("Palmeiras") ? palpts += 3 : ""
-    todosostimes[i].includes("Internacional") ? interpts += 3 : ""
-    todosostimes[i].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    todosostimes[i].includes("Santos") ? santospts += 3 : ""
+    testando[i].includes("Vasco") ? vascopts += 3 : ""
+ testando[i].includes("Flamengo") ? flapts += 3 : ""
+ testando[i].includes("Palmeiras") ? palpts += 3 : ""
+ testando[i].includes("Internacional") ? interpts += 3 : ""
+ testando[i].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+ testando[i].includes("Santos") ? santospts += 3 : ""
     
 
 
@@ -176,14 +176,14 @@ if(timesgols[0] > timesgols[1]){
 if(cidadesduplicadas[0] == cidadesduplicadas[1]){
     
     let primeiroelemento2v = document.getElementById("turnodevolta").firstElementChild.textContent += "(RODADA DUPLA)"
-    turnodevolta.innerHTML += `<p>${jogo2rodada1volta}(RODADA DUPLA)<p>`
+    turnodevolta.innerHTML += `<p>${jogo1Rodada2v}(RODADA DUPLA)<p>`
         cidadesduplicadas[0] = ""
 
       
 }
  
 else
-    turnodevolta.innerHTML += `<p>${jogo2rodada1volta}</p>`
+    turnodevolta.innerHTML += `<p>${jogo1Rodada2v}</p>`
     
  }if(cidadesduplicadas[2] == cidadesduplicadas[1] & cidadesduplicadas[2] != cidadesduplicadas[0]){
 
@@ -213,26 +213,26 @@ ultimoelemento2v = document.getElementById("turnodevolta").lastElementChild.text
 
     misturando(timesgols)
     misturando(cidades)
-var jogo1Rodada2 = `${todosostimes[x]} vs${todosostimes[x+3]} - ${cidades[x]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
+var jogo1Rodada2 = `${testando[x]} vs${testando[x+3]} - ${cidades[x]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
 cidadesduplicadas.push(cidades[x])
 
 if(timesgols[0] > timesgols[1]){
-    todosostimes[x].includes("Vasco") ? vascopts += 3 : ""
-    todosostimes[x].includes("Flamengo") ? flapts += 3 : ""
-    todosostimes[x].includes("Palmeiras") ? palpts += 3 : ""
-    todosostimes[x].includes("Internacional") ? interpts += 3 : ""
-    todosostimes[x].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    todosostimes[x].includes("Santos") ? santospts += 3 : ""
+ testando[x].includes("Vasco") ? vascopts += 3 : ""
+ testando[x].includes("Flamengo") ? flapts += 3 : ""
+ testando[x].includes("Palmeiras") ? palpts += 3 : ""
+ testando[x].includes("Internacional") ? interpts += 3 : ""
+ testando[x].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+ testando[x].includes("Santos") ? santospts += 3 : ""
 
 
 
 }if(timesgols[1] > timesgols[0]){
-    todosostimes[x+3].includes("Vasco") ? vascopts += 3 : ""
-    todosostimes[x+3].includes("Flamengo") ? flapts += 3 : ""
-    todosostimes[x+3].includes("Palmeiras") ? palpts += 3 : ""
-    todosostimes[x+3].includes("Internacional") ? interpts += 3 : ""
-    todosostimes[x+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    todosostimes[x+3].includes("Santos") ? santospts += 3 : ""
+    testando[x+3].includes("Vasco") ? vascopts += 3 : ""
+    testando[x+3].includes("Flamengo") ? flapts += 3 : ""
+    testando[x+3].includes("Palmeiras") ? palpts += 3 : ""
+    testando[x+3].includes("Internacional") ? interpts += 3 : ""
+    testando[x+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    testando[x+3].includes("Santos") ? santospts += 3 : ""
     
 
 
@@ -241,7 +241,7 @@ if(timesgols[0] > timesgols[1]){
 
 if(cidadesduplicadas[0] == cidadesduplicadas[1]){
     
-    let primeiroelemento2 = document.getElementById("turnodeida2").firstElementChild.textContent += "(RODADA DUPLA)"
+    let primeiroelemento2 = document.getElementById("sorteadosvolta").firstElementChild.textContent += "(RODADA DUPLA)"
     sorteadosvolta.innerHTML += `<p>${jogo1Rodada2}(RODADA DUPLA)<p>`
         cidadesduplicadas[0] = ""
 
@@ -253,14 +253,14 @@ else
     
  }if(cidadesduplicadas[2] == cidadesduplicadas[1] & cidadesduplicadas[2] != cidadesduplicadas[0]){
 
- ultimoelemento2 = document.getElementById("turnodeida2").lastElementChild.textContent += "(RODADA DUPLA)"
- let primeiroelemento2 = document.getElementById("turnodeida2").children[1].textContent += "(RODADA DUPLA)"
+ ultimoelemento2 = document.getElementById("sorteadosvolta").lastElementChild.textContent += "(RODADA DUPLA)"
+ let primeiroelemento2 = document.getElementById("sorteadosvolta").children[1].textContent += "(RODADA DUPLA)"
 
 
 }if(cidadesduplicadas[0] == cidadesduplicadas[2]){
 
-ultimoelemento2 = document.getElementById("turnodeida2").lastElementChild.textContent += "(RODADA DUPLA)"
- primeiroelemento2 = document.getElementById("turnodeida2").firstElementChild.textContent += "(RODADA DUPLA)"
+ultimoelemento2 = document.getElementById("sorteadosvolta").lastElementChild.textContent += "(RODADA DUPLA)"
+ p2 = document.getElementById("sorteadosvolta").firstElementChild.textContent += "(RODADA DUPLA)"
  
 }
 
@@ -280,28 +280,28 @@ for(x = 0; x<3;x++){
     misturando(timesgols)
     misturando(cidades)
 
-    var jogo2Rodada2volta = `${todosostimes[x+3]} vs${todosostimes[x]} - ${cidades[x]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
+    var jogo1Rodada2v2 = `${testando[x+3]} vs${testando[x]} - ${cidades[x]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
 cidadesduplicadas.push(cidades[x])
 
 if(timesgols[0] > timesgols[1]){
 
 
-    todosostimes[x+3].includes("Vasco") ? vascopts += 3 : ""
-    todosostimes[x+3].includes("Flamengo") ? flapts += 3 : ""
-    todosostimes[x+3].includes("Palmeiras") ? palpts += 3 : ""
-    todosostimes[x+3].includes("Internacional") ? interpts += 3 : ""
-    todosostimes[x+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    todosostimes[x+3].includes("Santos") ? santospts += 3 : ""
+ testando[x+3].includes("Vasco") ? vascopts += 3 : ""
+    testando[x+3].includes("Flamengo") ? flapts += 3 : ""
+    testando[x+3].includes("Palmeiras") ? palpts += 3 : ""
+    testando[x+3].includes("Internacional") ? interpts += 3 : ""
+    testando[x+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    testando[x+3].includes("Santos") ? santospts += 3 : ""
 
 
 
 }if(timesgols[1] > timesgols[0]){
-    todosostimes[x].includes("Vasco") ? vascopts += 3 : ""
-    todosostimes[x].includes("Flamengo") ? flapts += 3 : ""
-    todosostimes[x].includes("Palmeiras") ? palpts += 3 : ""
-    todosostimes[x].includes("Internacional") ? interpts += 3 : ""
-    todosostimes[x].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    todosostimes[x].includes("Santos") ? santospts += 3 : ""
+    testando[x].includes("Vasco") ? vascopts += 3 : ""
+ testando[x].includes("Flamengo") ? flapts += 3 : ""
+ testando[x].includes("Palmeiras") ? palpts += 3 : ""
+ testando[x].includes("Internacional") ? interpts += 3 : ""
+ testando[x].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+ testando[x].includes("Santos") ? santospts += 3 : ""
     
 
 
@@ -310,15 +310,15 @@ if(timesgols[0] > timesgols[1]){
 
 if(cidadesduplicadas[0] == cidadesduplicadas[1]){
     
-    let primeiroelemento2volta = document.getElementById("turnodevolta2").firstElementChild.textContent += "(RODADA DUPLA)"
-    turnodevolta2.innerHTML += `<p>${jogo2Rodada2volta}(RODADA DUPLA)<p>`
+    let primeiroelemento2v2 = document.getElementById("turnodevolta2").firstElementChild.textContent += "(RODADA DUPLA)"
+    turnodevolta2.innerHTML += `<p>${jogo1Rodada2v2}(RODADA DUPLA)<p>`
         cidadesduplicadas[0] = ""
 
       
 }
  
 else
-    turnodevolta2.innerHTML += `<p>${jogo2Rodada2volta}</p>`
+    turnodevolta2.innerHTML += `<p>${jogo1Rodada2v2}</p>`
     
  }if(cidadesduplicadas[2] == cidadesduplicadas[1] & cidadesduplicadas[2] != cidadesduplicadas[0]){
 
@@ -329,7 +329,7 @@ else
 }if(cidadesduplicadas[0] == cidadesduplicadas[2]){
 
 ultimoelemento2v2 = document.getElementById("turnodevolta2").lastElementChild.textContent += "(RODADA DUPLA)"
- primeiroelemento2volta = document.getElementById("turnodevolta2").firstElementChild.textContent += "(RODADA DUPLA)"
+ p2v2 = document.getElementById("turnodevolta2").firstElementChild.textContent += "(RODADA DUPLA)"
  
 }
 
@@ -337,8 +337,21 @@ ultimoelemento2v2 = document.getElementById("turnodevolta2").lastElementChild.te
     misturando(cidades)
     cidadesduplicadas = [x]
 
-    
+  
+
+   
+
 definirvencedor()
+
+
+
+console.log(`pts do vasco:${vascopts}`)
+console.log(`pts do flamengo:${flapts}`)
+console.log(`pts do palmeiras:${palpts}`)
+console.log(`pts do internacional:${interpts}`)
+console.log(`pts do cruzeiro:${cruzeiropts}`)
+console.log(`pts do santos:${santospts}`)    
+
 
 })
 
@@ -347,11 +360,10 @@ definirvencedor()
 function definirvencedor(){
 
 let arraypts = [vascopts, flapts, palpts, interpts, cruzeiropts, santospts]
-arraypts.sort(  (a, b) => {
-        return a - b;
-    });
-
+arraypts.sort()
+console.log(arraypts)
 let maior = arraypts[5]
+console.log(maior)
 
 maior == vascopts ? tabela.innerHTML = "<h1>vasco ganhou</h1>" : ""
 maior == flapts ?  tabela.innerHTML = "<h1>flamengo ganhou</h1>" : ""
@@ -359,5 +371,7 @@ maior == palpts ?  tabela.innerHTML = "<h1>palmeiras ganhou</h1>" : ""
 maior == interpts ?  tabela.innerHTML = "<h1>internacional ganhou</h1>" : ""
 maior == cruzeiropts ?  tabela.innerHTML = "<h1>cruzeiro ganhou</h1>" : ""
 maior == santospts ?  tabela.innerHTML = "<h1>santos ganhou</h1>" : ""
+
+
 
 }
