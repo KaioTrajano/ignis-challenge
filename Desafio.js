@@ -345,13 +345,6 @@ definirvencedor()
 
 
 
-console.log(`pts do vasco:${vascopts}`)
-console.log(`pts do flamengo:${flapts}`)
-console.log(`pts do palmeiras:${palpts}`)
-console.log(`pts do internacional:${interpts}`)
-console.log(`pts do cruzeiro:${cruzeiropts}`)
-console.log(`pts do santos:${santospts}`)    
-
 
 })
 
@@ -360,10 +353,15 @@ console.log(`pts do santos:${santospts}`)
 function definirvencedor(){
 
 let arraypts = [vascopts, flapts, palpts, interpts, cruzeiropts, santospts]
-arraypts.sort()
-console.log(arraypts)
+
+arraypts.sort((a, b) => {
+    return a - b;
+});
+
+
+
 let maior = arraypts[5]
-console.log(maior)
+
 
 maior == vascopts ? tabela.innerHTML = "<h1>vasco ganhou</h1>" : ""
 maior == flapts ?  tabela.innerHTML = "<h1>flamengo ganhou</h1>" : ""
