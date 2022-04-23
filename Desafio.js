@@ -200,6 +200,7 @@ ultimoelemento2v = document.getElementById("turnodevolta").lastElementChild.text
 
     
     misturando(cidades)
+    misturando(testando)
     cidadesduplicadas = []
 
         
