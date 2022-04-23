@@ -16,7 +16,7 @@ timescerto.pop()
 timescerto.shift()
 
 
-let testando = timescerto.map( (timess) =>{
+let todosostimes = timescerto.map( (timess) =>{
 
 
 return timess.split(";")[0];
@@ -66,7 +66,7 @@ let santospts = 0
 sortear.addEventListener("click", () =>{
     
   
-    misturando(testando)
+    misturando(todosostimes)
     misturando(cidades)
 
  // TURNO IDA RODADA 1
@@ -77,27 +77,27 @@ sortear.addEventListener("click", () =>{
     
     misturando(timesgols)
     misturando(cidades)
-var jogo1Rodada1 = `${testando[i]} vs${testando[i+3]} - ${cidades[i]} - rodada 1 ${timesgols[0]}x${timesgols[1]}`
+var jogo1Rodada1 = `${todosostimes[i]} vs${todosostimes[i+3]} - ${cidades[i]} - rodada 1 ${timesgols[0]}x${timesgols[1]}`
 
 cidadesduplicadas.push(cidades[i])
 
 if(timesgols[0] > timesgols[1]){
- testando[i].includes("Vasco") ? vascopts += 3 : ""
- testando[i].includes("Flamengo") ? flapts += 3 : ""
- testando[i].includes("Palmeiras") ? palpts += 3 : ""
- testando[i].includes("Internacional") ? interpts += 3 : ""
- testando[i].includes("Cruzeiro") ? cruzeiropts += 3 : ""
- testando[i].includes("Santos") ? santospts += 3 : ""
+ todosostimes[i].includes("Vasco") ? vascopts += 3 : ""
+ todosostimes[i].includes("Flamengo") ? flapts += 3 : ""
+ todosostimes[i].includes("Palmeiras") ? palpts += 3 : ""
+ todosostimes[i].includes("Internacional") ? interpts += 3 : ""
+ todosostimes[i].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+ todosostimes[i].includes("Santos") ? santospts += 3 : ""
 
 
 
 }if(timesgols[1] > timesgols[0]){
-    testando[i+3].includes("Vasco") ? vascopts += 3 : ""
-    testando[i+3].includes("Flamengo") ? flapts += 3 : ""
-    testando[i+3].includes("Palmeiras") ? palpts += 3 : ""
-    testando[i+3].includes("Internacional") ? interpts += 3 : ""
-    testando[i+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    testando[i+3].includes("Santos") ? santospts += 3 : ""
+    todosostimes[i+3].includes("Vasco") ? vascopts += 3 : ""
+    todosostimes[i+3].includes("Flamengo") ? flapts += 3 : ""
+    todosostimes[i+3].includes("Palmeiras") ? palpts += 3 : ""
+    todosostimes[i+3].includes("Internacional") ? interpts += 3 : ""
+    todosostimes[i+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    todosostimes[i+3].includes("Santos") ? santospts += 3 : ""
  
 
 }
@@ -145,28 +145,28 @@ ultimoelemento = document.getElementById("turnodeida1").lastElementChild.textCon
         misturando(timesgols)
     misturando(cidades)
 
-    var jogo2rodada1volta = `${testando[i+3]} vs${testando[i]} - ${cidades[i]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
+    var jogo2rodada1volta = `${todosostimes[i+3]} vs${todosostimes[i]} - ${cidades[i]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
 cidadesduplicadas.push(cidades[i])
 
 if(timesgols[0] > timesgols[1]){
 
 
- testando[i+3].includes("Vasco") ? vascopts += 3 : ""
-    testando[i+3].includes("Flamengo") ? flapts += 3 : ""
-    testando[i+3].includes("Palmeiras") ? palpts += 3 : ""
-    testando[i+3].includes("Internacional") ? interpts += 3 : ""
-    testando[i+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    testando[i+3].includes("Santos") ? santospts += 3 : ""
+    todosostimes[i+3].includes("Vasco") ? vascopts += 3 : ""
+ todosostimes[i+3].includes("Flamengo") ? flapts += 3 : ""
+ todosostimes[i+3].includes("Palmeiras") ? palpts += 3 : ""
+ todosostimes[i+3].includes("Internacional") ? interpts += 3 : ""
+ todosostimes[i+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+ todosostimes[i+3].includes("Santos") ? santospts += 3 : ""
 
 
 
 }if(timesgols[1] > timesgols[0]){
-    testando[i].includes("Vasco") ? vascopts += 3 : ""
- testando[i].includes("Flamengo") ? flapts += 3 : ""
- testando[i].includes("Palmeiras") ? palpts += 3 : ""
- testando[i].includes("Internacional") ? interpts += 3 : ""
- testando[i].includes("Cruzeiro") ? cruzeiropts += 3 : ""
- testando[i].includes("Santos") ? santospts += 3 : ""
+    todosostimes[i].includes("Vasco") ? vascopts += 3 : ""
+    todosostimes[i].includes("Flamengo") ? flapts += 3 : ""
+    todosostimes[i].includes("Palmeiras") ? palpts += 3 : ""
+    todosostimes[i].includes("Internacional") ? interpts += 3 : ""
+    todosostimes[i].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    todosostimes[i].includes("Santos") ? santospts += 3 : ""
     
 
 
@@ -213,26 +213,26 @@ ultimoelemento2v = document.getElementById("turnodevolta").lastElementChild.text
 
     misturando(timesgols)
     misturando(cidades)
-var jogo1Rodada2 = `${testando[x]} vs${testando[x+3]} - ${cidades[x]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
+var jogo1Rodada2 = `${todosostimes[x]} vs${todosostimes[x+3]} - ${cidades[x]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
 cidadesduplicadas.push(cidades[x])
 
 if(timesgols[0] > timesgols[1]){
- testando[x].includes("Vasco") ? vascopts += 3 : ""
- testando[x].includes("Flamengo") ? flapts += 3 : ""
- testando[x].includes("Palmeiras") ? palpts += 3 : ""
- testando[x].includes("Internacional") ? interpts += 3 : ""
- testando[x].includes("Cruzeiro") ? cruzeiropts += 3 : ""
- testando[x].includes("Santos") ? santospts += 3 : ""
+    todosostimes[x].includes("Vasco") ? vascopts += 3 : ""
+    todosostimes[x].includes("Flamengo") ? flapts += 3 : ""
+    todosostimes[x].includes("Palmeiras") ? palpts += 3 : ""
+    todosostimes[x].includes("Internacional") ? interpts += 3 : ""
+    todosostimes[x].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    todosostimes[x].includes("Santos") ? santospts += 3 : ""
 
 
 
 }if(timesgols[1] > timesgols[0]){
-    testando[x+3].includes("Vasco") ? vascopts += 3 : ""
-    testando[x+3].includes("Flamengo") ? flapts += 3 : ""
-    testando[x+3].includes("Palmeiras") ? palpts += 3 : ""
-    testando[x+3].includes("Internacional") ? interpts += 3 : ""
-    testando[x+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    testando[x+3].includes("Santos") ? santospts += 3 : ""
+    todosostimes[x+3].includes("Vasco") ? vascopts += 3 : ""
+    todosostimes[x+3].includes("Flamengo") ? flapts += 3 : ""
+    todosostimes[x+3].includes("Palmeiras") ? palpts += 3 : ""
+    todosostimes[x+3].includes("Internacional") ? interpts += 3 : ""
+    todosostimes[x+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    todosostimes[x+3].includes("Santos") ? santospts += 3 : ""
     
 
 
@@ -280,28 +280,28 @@ for(x = 0; x<3;x++){
     misturando(timesgols)
     misturando(cidades)
 
-    var jogo2Rodada2volta = `${testando[x+3]} vs${testando[x]} - ${cidades[x]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
+    var jogo2Rodada2volta = `${todosostimes[x+3]} vs${todosostimes[x]} - ${cidades[x]} - rodada 2 ${timesgols[0]}x${timesgols[1]}`
 cidadesduplicadas.push(cidades[x])
 
 if(timesgols[0] > timesgols[1]){
 
 
- testando[x+3].includes("Vasco") ? vascopts += 3 : ""
-    testando[x+3].includes("Flamengo") ? flapts += 3 : ""
-    testando[x+3].includes("Palmeiras") ? palpts += 3 : ""
-    testando[x+3].includes("Internacional") ? interpts += 3 : ""
-    testando[x+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
-    testando[x+3].includes("Santos") ? santospts += 3 : ""
+    todosostimes[x+3].includes("Vasco") ? vascopts += 3 : ""
+    todosostimes[x+3].includes("Flamengo") ? flapts += 3 : ""
+    todosostimes[x+3].includes("Palmeiras") ? palpts += 3 : ""
+    todosostimes[x+3].includes("Internacional") ? interpts += 3 : ""
+    todosostimes[x+3].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    todosostimes[x+3].includes("Santos") ? santospts += 3 : ""
 
 
 
 }if(timesgols[1] > timesgols[0]){
-    testando[x].includes("Vasco") ? vascopts += 3 : ""
- testando[x].includes("Flamengo") ? flapts += 3 : ""
- testando[x].includes("Palmeiras") ? palpts += 3 : ""
- testando[x].includes("Internacional") ? interpts += 3 : ""
- testando[x].includes("Cruzeiro") ? cruzeiropts += 3 : ""
- testando[x].includes("Santos") ? santospts += 3 : ""
+    todosostimes[x].includes("Vasco") ? vascopts += 3 : ""
+    todosostimes[x].includes("Flamengo") ? flapts += 3 : ""
+    todosostimes[x].includes("Palmeiras") ? palpts += 3 : ""
+    todosostimes[x].includes("Internacional") ? interpts += 3 : ""
+    todosostimes[x].includes("Cruzeiro") ? cruzeiropts += 3 : ""
+    todosostimes[x].includes("Santos") ? santospts += 3 : ""
     
 
 
